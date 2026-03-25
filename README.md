@@ -2,7 +2,7 @@
 
 Portfolio website to actively demonstrate my projects and skills.
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)]([YOUR_LINK_HERE](https://murugan47.github.io/WolfTonicGameLab/))
+[![Play Demo](https://img.shields.io/badge/Demo-Click_here-brightgreen)](https://murugan47.github.io/WolfTonicGameLab/)
 
 ## 🚀 About the Gamelab
 The Gamelab is a **Web-based Game Portfolio** designed to host and launch multiple Unity-developed projects from a single, cohesive interface. It serves as a personal digital arcade and technical showcase of self-taught projects within Unity and Web Development. Instead of navigating between different sites, users can explore various technical experiments—such as physics simulations and arcade-style games—all within one unified environment.
