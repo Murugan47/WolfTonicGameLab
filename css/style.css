@@ -1,8 +1,10 @@
-/* Reset and Base Styles */
+/* 
+ * Reset and Base Styles for basic formatting within the webpage
+ * This section ensures that all elements start with no margin or padding, and sets up the basic font and layout for the site.
+ */
 * {
     margin: 0;
     padding: 0;
-    box-box: border-box;
 }
 
 body, html {
@@ -20,7 +22,7 @@ body, html {
     z-index: 1;
 }
 
-/* The Header and Footer */
+/* The Header and Footer style */
 .main-header, .main-footer {
     background: rgba(0, 0, 0, 0.8);
     color: white;
@@ -30,46 +32,58 @@ body, html {
     align-items: center;
 }
 
+/* The Main Content Area where the primary content is displayed */
 .content-area {
     display: flex;
     flex: 1;
-    overflow: hidden; /* Prevents the main site from scrolling */
+
+    /* Prevents the main site from scrolling */
+    overflow: hidden;
 }
 
+/* The Master IFrame Shell that loads all pages within its boundaries */
 #content-shell {
     width: 100%;
     height: 100%;
     border: none;
     display: block;
-    overflow: hidden; /* Secondary insurance against scrollbars */
+
+    /* Secondary insurance against scrollbars */
+    overflow: hidden;
 }
 
 /* --- Game Page Specific Layout --- */
 
-/* Add this to game.html */
+/* Style for the game page */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* This kills the scrollbar */
+
+    /* This hides the scrollbar of the index.html within the game itself */
+    overflow: hidden;
 }
 
+/* The container for the game IFrame, ensuring it fills the entire viewport and has a flexible layout */
 .game-wrapper, .iframe-container {
     width: 100vw;
     height: 100vh;
     display: flex;
 }
 
+/* The IFrame that loads the Unity game, set to fill its container and hide any overflow to prevent scrollbars */
 #unity-iframe {
     width: 100%;
     height: 100%;
     border: none;
-    display: block; /* Removes the tiny gap at the bottom of the iframe */
+
+    /* Removes the tiny gap at the bottom of the iframe */
+    display: block;
     overflow: hidden;
 }
 
-/* The Animated Background */
+/* The Animated Background style */
 .animated-bg {
     position: fixed;
     top: 0;
@@ -82,6 +96,10 @@ html, body {
     animation: gradientBG 10s ease infinite;
 }
 
+/* 
+ * This keyframe animation creates a smooth, looping gradient background that shifts colors over time, 
+ * giving a dynamic and visually appealing effect to the site. 
+ */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     25% { background-position: 50% 50%; }
@@ -89,6 +107,7 @@ html, body {
     100% { background-position: 0% 50%; }
 }
 
+/* The Stars Layer style */
 #stars {
     width: 2px;
     height: 2px;
@@ -101,8 +120,10 @@ html, body {
     animation: spaceScroll 100s linear infinite;
 }
 
-/* This creates a second "layer" of the same stars below the first 
-   to make the loop seamless as they scroll up */
+/* 
+ * This creates a second "layer" of the same stars below the first 
+ * to make the loop seamless as they scroll up 
+ */
 #stars::after {
     content: "";
     position: absolute;
@@ -110,9 +131,15 @@ html, body {
     width: 2px;
     height: 2px;
     background: transparent;
-    box-shadow: inherit; /* Copies the 500 stars exactly */
+
+    /* Copies the 100 stars exactly */
+    box-shadow: inherit;
 }
 
+/* This keyframe animation scrolls the stars upwards, creating the illusion of moving through space. 
+ * The stars start at their original position and move up by 100vh, which is the height of the viewport, 
+ * before looping back to the start to create a continuous scrolling effect.
+ */
 @keyframes spaceScroll {
     from { transform: translateY(0); }
     to { transform: translateY(-100vh); }
@@ -128,6 +155,12 @@ button {
     border-radius: 4px;
 }
 
+/* --- Game Selection Page Styles --- */
+
+/* 
+ * Determines the style of the grid. 
+ * A responsive layout that adapts to different screen sizes 
+ */
 .games-grid {
     display: grid;
     /* This creates as many 250px columns as will fit on one line */
@@ -139,7 +172,9 @@ button {
     justify-content: center; 
 }
 
-/* 2. The Card: Ensure the image and text stay together */
+/* 
+ * Wraps it all within a card to ensure the image and text stay aligned together 
+ */
 button.game-card {
     width: 250px;
     background: rgba(255, 255, 255, 0.05); /* Slight background to see the card area */
@@ -169,33 +204,39 @@ button.game-card:focus {
 }
 
 button.game-card:active {
-    transform: scale(0.95); /* Shrinks slightly when clicked for a "button" feel */
+    transform: scale(0.95); /* Shrinks slightly when clicked for a aesthetics */
 }
 
 /* This forces the container to stay at 250px */
 .thumbnail {
     width: 250px;
     height: 180px;
-    background: #000; /* Black background for the square */
+
+    /* Black background for the square to ensure the image is easily visible */
+    background: #000;
     border: 2px solid #333;
     border-radius: 8px;
-    overflow: hidden; /* This clips any image parts that are too big */
+
+    /* This clips any image parts that are too big */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* This forces the ACTUAL IMAGE to stay small */
+/* This forces the Image to stay small */
 .thumbnail img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* This makes the image fill the square without stretching */
+
+    /* This makes the image fill the square without stretching by filling the frame */
+    object-fit: contain;
     display: block;
 }
 
 /* --- About Page Styles --- */
 
-/* Ensures the page content is centered and doesn't exceed your lab's standard width */
+/* Ensures the page content is centered and does not exceed maximum width */
 .about-container {
     width: 90%;
     max-width: 1366px; 
@@ -207,7 +248,7 @@ button.game-card:active {
     background-color: #343434;
 }
 
-/* Header styling with your signature purple accent */
+/* Header styling with a purple accent */
 .about-container header {
     border-bottom: 2px solid #ad76c6;
     margin-bottom: 30px;
@@ -229,7 +270,7 @@ button.game-card:active {
     padding-left: 15px;
 }
 
-/* Glassmorphism effect for content blocks to match a modern game UI */
+/* Clear effect for content blocks to match a modern game UI */
 .section-content {
     background: rgba(255, 255, 255, 0.05);
     padding: 25px;

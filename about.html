@@ -9,12 +9,16 @@
 
 <body>
 
+    <!-- About Container -->
     <div class="about-container">
+
+        <!-- Header with title and description -->
         <header>
             <h1>About the Gamelab</h1>
             <p>A personal digital arcade and technical showcase of all the self-taught projects within Unity and Web Development.</p>
         </header>
 
+        <!-- Section describing what the Gamelab is -->
         <section>
             <h2>What It Is</h2>
             <div class="section-content">
@@ -26,6 +30,7 @@
             </div>
         </section>
 
+        <!-- Section explaining how the Gamelab works -->
         <section>
             <h2>How It Works</h2>
             <div class="section-content">
@@ -48,6 +53,7 @@
             </div>
         </section>
 
+        <!-- Section describing the development process and technologies used -->
         <section>
             <h2>What I Did</h2>
             <div class="section-content">
@@ -65,13 +71,15 @@
 
 </body>
 
+    <!-- Custom Styles for the About Page only used once within the website, as it does not require its own section within style.css -->
     <style>
-        /* Force scrolling on this page specifically */
+
+        /* Force scrolling on this page specifically as scrolling by default is disable */
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            /* 'initial' or 'auto' with !important forces the scrollbar back */
+            /* !important forces the scrollbar back*/
             overflow-y: auto !important; 
             overflow-x: hidden !important;
         }
@@ -81,11 +89,13 @@
             max-width: 1366px;
             margin: 0 auto;
             padding: 40px;
-            padding-bottom: 100px; /* Extra space so the bottom text isn't cut off */
+
+            /* Extra space so the bottom text isn't cut off */
+            padding-bottom: 100px;
             box-sizing: border-box;
         }
         
-        /* Optional: Make the scrollbar purple to match your theme */
+        /* Makes the scrollbar purple to match the theme */
         body::-webkit-scrollbar {
             width: 10px;
         }
@@ -94,5 +104,4 @@
             border-radius: 5px;
         }
     </style>
-
 </html>
