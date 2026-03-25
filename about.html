@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Gamelab</title>
+</head>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+
+    <div class="about-container">
+        <header>
+            <h1>About the Gamelab</h1>
+            <p>A personal digital arcade and technical showcase of all the self-taught projects within Unity and Web Development.</p>
+        </header>
+
+        <section>
+            <h2>What It Is</h2>
+            <div class="section-content">
+                <p>The Gamelab is a <strong>Web-based Game Portfolio</strong> designed to host and launch multiple
+                    Unity-developed projects from a single, cohesive interface. Instead of navigating between different sites, 
+                    users can explore various technical experiments such as physics simulations and arcade-style games all within 
+                    one unified environment.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <div class="section-content">
+                <p>The website operates by manipulating a Master IFrame to autoload all architecture files:</p>
+                <ul>
+                    <li><strong>The Hub:</strong> The main gallery uses a <span class="highlight">Modern CSS Grid</span> layout, 
+                        ensuring "game cards" automatically organize themselves in a table styled formatting that also allows
+                        tabbing each button for easy access.
+                    </li>
+
+                    <li><strong>The Integration:</strong> Games are compiled using <strong>Unity WebGL</strong> and loaded 
+                        dynamically using the master IFrame, with the WebGL based index file manipulated to inherit the main layouts aspect ratio.
+                    </li>
+
+                    <li><strong>Easy Scalability:</strong> To maintain quality, any new game can simply be added within the 
+                        home.html file and using basic references and <span class="highlight">stylized buttons</span>, ensuring 
+                        all games integrate seamlessly.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>What I Did</h2>
+            <div class="section-content">
+                <p>Building this platform required a blend of basic software engineering and web development:</p>
+                <ul>
+                    <li><strong>Platform Architecture:</strong> Developed the frontend using <strong>HTML5, CSS, and Javascript</strong> with a responsive grid system and IFrame system.</li>
+                    <li><strong>Unity Optimization:</strong> Managed the export and configuration of several projects, optimizing them for web performance and adjusted their files manually to work within the web environment.</li>
+                    <li><strong>Custom UI/UX:</strong> Designed the "Game Card" interface with interactive hover effects and to also include accessibility features.</li>
+                    <li><strong>Responsive Logic:</strong> Wrote custom JavaScript and CSS wrappers to allow games to all seamlessly appear on the same webpage without requiring any reloading.</li>
+                    <li><strong>Diverse Project Implementation:</strong> Developed a variety of simulations including <em>Reel That Fish!</em>, <em>Hockey Physics</em>, <em>Webtris</em>, and <em>Double Pendulum Sim</em>. Using self-taught skills in development.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+    <style>
+        /* Force scrolling on this page specifically */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 'initial' or 'auto' with !important forces the scrollbar back */
+            overflow-y: auto !important; 
+            overflow-x: hidden !important;
+        }
+
+        .about-container {
+            width: 90%;
+            max-width: 1366px;
+            margin: 0 auto;
+            padding: 40px;
+            padding-bottom: 100px; /* Extra space so the bottom text isn't cut off */
+            box-sizing: border-box;
+        }
+        
+        /* Optional: Make the scrollbar purple to match your theme */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background: #ad76c6;
+            border-radius: 5px;
+        }
+    </style>
+
+</html>

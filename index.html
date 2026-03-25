@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolf Tonic GameLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- This is where the main context of the page is contained -->
+    <div class="animated-bg">
+        <div id="stars">
+
+        </div>
+    </div>
+
+    <div class="site-wrapper">
+
+        <!-- The header for the webpage that includes basic navigation -->
+        <header class="main-header">
+
+            <button class="logo" onclick="loadPage('home.html')">
+                Wolf Tonic GameLab
+            </button>
+
+            <nav>
+                <button onclick="loadPage('about.html')">About</button>
+            </nav>
+            
+        </header>
+
+        <!-- The main area where all games and home page is loaded and interacted with -->
+        <main class="content-area">
+
+            <iframe id="content-shell" src="home.html" frameborder="0" allowfullscreen></iframe>
+
+        </main>
+
+        <!-- The footer that contains the copyright information -->
+        <footer class="main-footer">
+
+            <p style="position: absolute; right: 2rem;" class="text-right">
+                &copy; 2026 <strong>Wolf Tonic Studios</strong>. 
+                This work is licensed under 
+                <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener noreferrer">
+                    CC BY-NC 4.0
+                </a>
+            </p>
+
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

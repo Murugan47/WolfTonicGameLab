@@ -1,0 +1,270 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-box: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevents double scrollbars */
+}
+
+/* The Layout Container */
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* The Header and Footer */
+.main-header, .main-footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Prevents the main site from scrolling */
+}
+
+#content-shell {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    overflow: hidden; /* Secondary insurance against scrollbars */
+}
+
+/* --- Game Page Specific Layout --- */
+
+/* Add this to game.html */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* This kills the scrollbar */
+}
+
+.game-wrapper, .iframe-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#unity-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block; /* Removes the tiny gap at the bottom of the iframe */
+    overflow: hidden;
+}
+
+/* The Animated Background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(-45deg, #7d1099, #2b1379, #ab13e2);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#stars {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /* The box-shadow is injected here by JavaScript */
+    animation: spaceScroll 100s linear infinite;
+}
+
+/* This creates a second "layer" of the same stars below the first 
+   to make the loop seamless as they scroll up */
+#stars::after {
+    content: "";
+    position: absolute;
+    top: 100vh; 
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: inherit; /* Copies the 500 stars exactly */
+}
+
+@keyframes spaceScroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100vh); }
+}
+
+/* Simple Button Styling */
+button {
+    background: #ad76c6;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.games-grid {
+    display: grid;
+    /* This creates as many 250px columns as will fit on one line */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; 
+    padding: 40px;
+    width: 90%;          /* Take up most of the screen width */
+    margin: 0 auto;      /* Center the whole grid on the page */
+    justify-content: center; 
+}
+
+/* 2. The Card: Ensure the image and text stay together */
+button.game-card {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.05); /* Slight background to see the card area */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* Ensure the button and its contents stay centered */
+.game-card {
+    display: table-cell;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+/* Better accessibility: show a glow when tabbing through games */
+button.game-card:focus {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #3e0053);
+}
+
+button.game-card:active {
+    transform: scale(0.95); /* Shrinks slightly when clicked for a "button" feel */
+}
+
+/* This forces the container to stay at 250px */
+.thumbnail {
+    width: 250px;
+    height: 180px;
+    background: #000; /* Black background for the square */
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden; /* This clips any image parts that are too big */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This forces the ACTUAL IMAGE to stay small */
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* This makes the image fill the square without stretching */
+    display: block;
+}
+
+/* --- About Page Styles --- */
+
+/* Ensures the page content is centered and doesn't exceed your lab's standard width */
+.about-container {
+    width: 90%;
+    max-width: 1366px; 
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #343434;
+}
+
+/* Header styling with your signature purple accent */
+.about-container header {
+    border-bottom: 2px solid #ad76c6;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.about-container h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Section headers with a vertical accent bar */
+.about-container h2 {
+    color: #ffffff;
+    margin-top: 40px;
+    font-size: 1.8rem;
+    border-left: 4px solid #ad76c6;
+    padding-left: 15px;
+}
+
+/* Glassmorphism effect for content blocks to match a modern game UI */
+.section-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.6;
+}
+
+/* Custom Bullet Points */
+.about-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-container li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Adds a purple dot before each list item */
+.about-container li::before {
+    content: "•";
+    color: #ad76c6;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Highlights and bold text */
+.about-container strong {
+    color: #fff;
+}
+
+.highlight {
+    color: #ad76c6;
+    font-weight: bold;
+}
