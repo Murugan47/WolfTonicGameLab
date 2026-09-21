@@ -20,9 +20,11 @@ The website operates by manipulating a **Master IFrame** to autoload all archite
 Building this platform required a blend of software engineering and web development:
 
 * **Platform Architecture**: Developed the frontend using **HTML5, CSS, and JavaScript** with a responsive grid and IFrame system.
+* **Godot Optimization**: Managed the export and configuration of the projects, optimizing them for optimal and fine-tuned experience
 * **Unity Optimization**: Managed the export and configuration of several projects, optimizing them for web performance and manually adjusting files to work within the web environment.
 * **Custom UI/UX**: Designed the "Game Card" interface with interactive hover effects and built-in accessibility features.
 * **Responsive Logic**: Wrote custom JavaScript and CSS wrappers to allow games to appear seamlessly on the same webpage without requiring any reloading.
+* **Coding Variety** Multiple projects of several programming languages all hosted and setup properly to be handled within the web
 
 ## 🕹️ Featured Projects
 This lab features a variety of simulations developed using self-taught skills:
