@@ -11,6 +11,7 @@ The Gamelab is a **Web-based Game Portfolio** designed to host and launch multip
 The website operates by manipulating a **Master IFrame** to autoload all architecture files:
 
 * **The Hub**: The main gallery uses a **Modern CSS Grid** layout, ensuring "game cards" automatically organize themselves in a table-styled format.
+* **Static Limitation Work-Around** the lack of ability to host a non-static website on GitHub Pages. Lead to a clever work around to have individual cards, and load them actively using nested iframes.
 * **Accessibility**: The layout allows for tabbing through each button for easy access and navigation.
 * **The Integration**: Games are compiled using **Unity WebGL** and loaded dynamically using the master IFrame.
 * **Aspect Ratio Management**: The WebGL-based index files are manually manipulated to inherit the main layout's aspect ratio.
