@@ -27,6 +27,7 @@ Building this platform required a blend of software engineering and web developm
 ## 🕹️ Featured Projects
 This lab features a variety of simulations developed using self-taught skills:
 
+* **BeatMeUp**: A kick the buddy inspired sandbox game. Beat the buddy up using all the tools/weapons included!
 * **Reel That Fish!**: A data-driven fishing simulator.
 * **Hockey Physics**: A simulation focused on collision and movement logic.
 * **Double Pendulum Sim**: A technical physics experiment.
