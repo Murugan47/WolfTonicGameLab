@@ -31,6 +31,7 @@ Building this platform required a blend of software engineering and web developm
 This lab features a variety of simulations developed using self-taught skills:
 
 * **BeatMeUp**: A kick the buddy inspired sandbox game. Beat the buddy up using all the tools/weapons included!
+* **Questionable (Currently down, API is deprecated)**: A react/vite multiplayer game using socket.io with AI integration. Ask questions and try to figure out what word the AI is thinking of.
 * **Reel That Fish!**: A data-driven fishing simulator.
 * **Hockey Physics**: A simulation focused on collision and movement logic.
 * **Double Pendulum Sim**: A technical physics experiment.
